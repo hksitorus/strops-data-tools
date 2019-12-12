@@ -1,0 +1,3 @@
+#!/bin/bash
+
+docker run -d --name=strops-data-tools --restart=always -v /data/jupyter/hksitorus:/home/hksitorus -v /data/jupyter/arifsolomon:/home/arifsolomon -v /data/jupyter/fchrulk:/home/fchrulk -v /data/jupyter/shared:/data/jupyter/shared -v /data/jupyter/shared:/shared -v /data/jupyter/jupyterhub:/jupyterhub -v /data/zeppelin/conf:/zeppelin/conf -v /data/zeppelin/logs:/zeppelin/logs -v /data/zeppelin/notebook:/zeppelin/notebook --net=host --add-host="Jakarta:172.16.0.232" strops-data-tools:latest
